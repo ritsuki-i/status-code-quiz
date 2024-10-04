@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/status-code-quiz/static/js/main.f3cce2e2.js",
+    "index.html": "/status-code-quiz/index.html",
+    "main.f3cce2e2.js.map": "/status-code-quiz/static/js/main.f3cce2e2.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f3cce2e2.js"
+  ]
+}
