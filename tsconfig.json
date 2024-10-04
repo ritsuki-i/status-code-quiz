@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",                           // コンパイル後のJavaScriptのターゲットバージョン
+    "module": "commonjs",                      // モジュールシステムの選択
+    "jsx": "react",                            // JSXの扱い
+    "strict": true,                            // 厳格モードの有効化
+    "esModuleInterop": true,                   // ESモジュールの互換性
+    "skipLibCheck": true,                      // ライブラリの型チェックをスキップ
+    "forceConsistentCasingInFileNames": true,   // 大文字小文字の一貫性を強制
+    "resolveJsonModule": true,
+  },
+  "include": ["src/**/*"],                     // コンパイル対象のファイル
+  "exclude": ["node_modules"]                  // 除外するディレクトリ
+}

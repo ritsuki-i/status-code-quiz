@@ -1,0 +1,312 @@
+[
+  {
+    "status_code": 100,
+    "error": "Continue",
+    "message": "クライアントはリクエストを継続できる。サーバがリクエストの最初の部分を受け取り、まだ拒否していないことを示す。"
+  },
+  {
+    "status_code": 101,
+    "error": "Switching Protocols",
+    "message": "サーバはリクエストを理解し、遂行のためにプロトコルの切り替えを要求している。"
+  },
+  {
+    "status_code": 102,
+    "error": "Processing",
+    "message": "処理中。WebDAVの拡張ステータスコード。処理が継続されて行われていることを示す。"
+  },
+  {
+    "status_code": 103,
+    "error": "Early Hints",
+    "message": "最終的なレスポンスヘッダが確定する前に、予想されるヘッダを伝達する。"
+  },
+  {
+    "status_code": 200,
+    "error": "OK",
+    "message": "リクエストは成功し、レスポンスとともに要求に応じた情報が返される。"
+  },
+  {
+    "status_code": 201,
+    "error": "Created",
+    "message": "リクエストは完了し、新たに作成されたリソースのURIが返される。"
+  },
+  {
+    "status_code": 202,
+    "error": "Accepted",
+    "message": "リクエストは受理されたが、処理は完了していない。"
+  },
+  {
+    "status_code": 203,
+    "error": "Non-Authoritative Information",
+    "message": "オリジナルのデータではなく、ローカルやプロキシ等からの情報であることを示す。"
+  },
+  {
+    "status_code": 204,
+    "error": "No Content",
+    "message": "リクエストを受理したが、返すべきレスポンスエンティティが存在しない場合に返される。"
+  },
+  {
+    "status_code": 205,
+    "error": "Reset Content",
+    "message": "リクエストを受理し、ユーザーエージェントの画面をリセットする場合に返される。"
+  },
+  {
+    "status_code": 206,
+    "error": "Partial Content",
+    "message": "部分的GETリクエストを受理したときに返される。"
+  },
+  {
+    "status_code": 207,
+    "error": "Multi-Status",
+    "message": "WebDAVの拡張ステータスコード。複数のステータスを示す。"
+  },
+  {
+    "status_code": 208,
+    "error": "Already Reported",
+    "message": "WebDAVの拡張ステータスコード。リクエストがすでに報告されている場合に返される。"
+  },
+  {
+    "status_code": 226,
+    "error": "IM Used",
+    "message": "Delta encoding in HTTPの拡張ステータスコード。"
+  },
+  {
+    "status_code": 300,
+    "error": "Multiple Choices",
+    "message": "リクエストしたリソースが複数存在し、選択肢を提示するときに返される。"
+  },
+  {
+    "status_code": 301,
+    "error": "Moved Permanently",
+    "message": "リクエストしたリソースが恒久的に移動されているときに返される。"
+  },
+  {
+    "status_code": 302,
+    "error": "Found",
+    "message": "リクエストしたリソースが一時的に移動されているときに返される。"
+  },
+  {
+    "status_code": 303,
+    "error": "See Other",
+    "message": "リクエストに対するレスポンスが他のURLに存在するときに返される。"
+  },
+  {
+    "status_code": 304,
+    "error": "Not Modified",
+    "message": "リクエストしたリソースは更新されていないことを示す。"
+  },
+  {
+    "status_code": 305,
+    "error": "Use Proxy",
+    "message": "レスポンスのLocationヘッダに示されるプロキシを使用してリクエストを行わなければならない。"
+  },
+  {
+    "status_code": 307,
+    "error": "Temporary Redirect",
+    "message": "リクエストメソッドを変更せずに一時的にリソースが移動されたときに返される。"
+  },
+  {
+    "status_code": 308,
+    "error": "Permanent Redirect",
+    "message": "リクエストメソッドを変更せずに恒久的にリソースが移動されたときに返される。"
+  },
+  {
+    "status_code": 400,
+    "error": "Bad Request",
+    "message": "リクエストが不正である。クライアントのリクエストに問題がある場合に返される。"
+  },
+  {
+    "status_code": 401,
+    "error": "Unauthorized",
+    "message": "認証が必要である場合に返される。"
+  },
+  {
+    "status_code": 402,
+    "error": "Payment Required",
+    "message": "支払いが必要である。"
+  },
+  {
+    "status_code": 403,
+    "error": "Forbidden",
+    "message": "リクエストされたリソースへのアクセスが禁止されている。"
+  },
+  {
+    "status_code": 404,
+    "error": "Not Found",
+    "message": "リクエストしたリソースが見つからなかった場合に返される。"
+  },
+  {
+    "status_code": 405,
+    "error": "Method Not Allowed",
+    "message": "許可されていないHTTPメソッドでリクエストした場合に返される。"
+  },
+  {
+    "status_code": 406,
+    "error": "Not Acceptable",
+    "message": "リクエストされたリソースがAcceptヘッダに基づいて受け入れられない場合に返される。"
+  },
+  {
+    "status_code": 407,
+    "error": "Proxy Authentication Required",
+    "message": "プロキシ認証が必要な場合に返される。"
+  },
+  {
+    "status_code": 408,
+    "error": "Request Timeout",
+    "message": "リクエストが時間内に完了しなかった場合に返される。"
+  },
+  {
+    "status_code": 409,
+    "error": "Conflict",
+    "message": "要求が現在のリソースと競合している場合に返される。"
+  },
+  {
+    "status_code": 410,
+    "error": "Gone",
+    "message": "リクエストされたリソースが恒久的に消滅している場合に返される。"
+  },
+  {
+    "status_code": 411,
+    "error": "Length Required",
+    "message": "リクエストにContent-Lengthヘッダが必要な場合に返される。"
+  },
+  {
+    "status_code": 412,
+    "error": "Precondition Failed",
+    "message": "リクエストが指定した前提条件が偽だった場合に返される。"
+  },
+  {
+    "status_code": 413,
+    "error": "Payload Too Large",
+    "message": "リクエストエンティティがサーバの許容範囲を超えている場合に返される。"
+  },
+  {
+    "status_code": 414,
+    "error": "URI Too Long",
+    "message": "URIが長すぎてサーバが処理できない場合に返される。"
+  },
+  {
+    "status_code": 415,
+    "error": "Unsupported Media Type",
+    "message": "サポートされていないメディアタイプを使用してリクエストが行われた場合に返される。"
+  },
+  {
+    "status_code": 416,
+    "error": "Range Not Satisfiable",
+    "message": "リクエストされた範囲がリソースの範囲外である場合に返される。"
+  },
+  {
+    "status_code": 417,
+    "error": "Expectation Failed",
+    "message": "Expectリクエストヘッダに指定された期待値が満たされない場合に返される。"
+  },
+  {
+    "status_code": 418,
+    "error": "I'm a teapot",
+    "message": "ティーポットにコーヒーを淹れさせようとして、拒否された場合に返される。ジョークのステータスコード。"
+  },
+  {
+    "status_code": 421,
+    "error": "Misdirected Request",
+    "message": "リクエストが誤ったサーバに送信された場合に返される。"
+  },
+  {
+    "status_code": 422,
+    "error": "Unprocessable Content",
+    "message": "リクエストが意味的に正しくない場合に返される。"
+  },
+  {
+    "status_code": 423,
+    "error": "Locked",
+    "message": "リクエストされたリソースがロックされている場合に返される。"
+  },
+  {
+    "status_code": 424,
+    "error": "Failed Dependency",
+    "message": "依存するリクエストが失敗したために処理できない場合に返される。"
+  },
+  {
+    "status_code": 425,
+    "error": "Too Early",
+    "message": "早すぎるリクエストである場合に返される。"
+  },
+  {
+    "status_code": 426,
+    "error": "Upgrade Required",
+    "message": "クライアントが異なるプロトコルにアップグレードする必要がある場合に返される。"
+  },
+  {
+    "status_code": 428,
+    "error": "Precondition Required",
+    "message": "条件付きリクエストでなければならない場合に返される。"
+  },
+  {
+    "status_code": 429,
+    "error": "Too Many Requests",
+    "message": "一定時間内にクライアントが送信したリクエストが多すぎる場合に返される。"
+  },
+  {
+    "status_code": 431,
+    "error": "Request Header Fields Too Large",
+    "message": "リクエストヘッダフィールドが大きすぎる場合に返される。"
+  },
+  {
+    "status_code": 451,
+    "error": "Unavailable For Legal Reasons",
+    "message": "法的な理由によりリソースが利用できない場合に返される。"
+  },
+  {
+    "status_code": 500,
+    "error": "Internal Server Error",
+    "message": "サーバ内部でエラーが発生した場合に返される。"
+  },
+  {
+    "status_code": 501,
+    "error": "Not Implemented",
+    "message": "サーバがリクエストメソッドを実装していない場合に返される。"
+  },
+  {
+    "status_code": 502,
+    "error": "Bad Gateway",
+    "message": "ゲートウェイまたはプロキシサーバが不正な応答を受け取った場合に返される。"
+  },
+  {
+    "status_code": 503,
+    "error": "Service Unavailable",
+    "message": "サーバが過負荷またはメンテナンス中で利用不可能な場合に返される。"
+  },
+  {
+    "status_code": 504,
+    "error": "Gateway Timeout",
+    "message": "ゲートウェイまたはプロキシサーバが指定された時間内にレスポンスを受け取れなかった場合に返される。"
+  },
+  {
+    "status_code": 505,
+    "error": "HTTP Version Not Supported",
+    "message": "リクエストがサポートされていないHTTPバージョンを使用している場合に返される。"
+  },
+  {
+    "status_code": 506,
+    "error": "Variant Also Negotiates",
+    "message": "Transparent Content Negotiationのループを検出した場合に返される。"
+  },
+  {
+    "status_code": 507,
+    "error": "Insufficient Storage",
+    "message": "サーバにリクエストを処理するためのストレージ容量がない場合に返される。"
+  },
+  {
+    "status_code": 508,
+    "error": "Loop Detected",
+    "message": "WebDAVの拡張ステータスコード。リソースの処理中に無限ループが検出された場合に返される。"
+  },
+  {
+    "status_code": 510,
+    "error": "Not Extended",
+    "message": "拡張が必要な場合に返される。"
+  },
+  {
+    "status_code": 511,
+    "error": "Network Authentication Required",
+    "message": "ネットワーク認証が必要な場合に返される。"
+  }
+]
