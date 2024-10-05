@@ -43,7 +43,7 @@ const StatusCodeTable: React.FC = () => {
 
   // DataGrid の列定義
   const columns: GridColDef[] = [
-    { field: 'status_code', headerName: 'ステータスコード', width: 150 },
+    { field: 'status_code', headerName: 'ステータスコード', width: 15 },
     { field: 'error', headerName: 'エラー名', width: 200 },
     { field: 'message', headerName: 'メッセージ', width: 600 },
   ];

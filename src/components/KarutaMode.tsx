@@ -39,7 +39,7 @@ function KarutaMode() {
             border: 'none',
             padding: '8px', // パディングを調整
             marginRight: '10px',
-            borderRadius: '50%', // ボタンを丸くする
+            borderRadius: '10%', // ボタンを丸くする
             '&:hover': {
               backgroundColor: 'rgba(0, 0, 0, 0.1)', // ホバー時に少し背景を暗く
             },
@@ -59,7 +59,7 @@ function KarutaMode() {
       {/* テーブルコンテナ */}
       <Box
         sx={{
-          padding: '20px',
+          padding: '10px',
           backgroundColor: '#f9f9f9'
         }}
       >
@@ -72,7 +72,7 @@ function KarutaMode() {
         sx={{
           backgroundColor: '#ffeeb5',
           textAlign: 'center',
-          padding: '15px 20px',
+          padding: '30px 20px',
           flexShrink: 0, // フッターの高さを固定
         }}
       >

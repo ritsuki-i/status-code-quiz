@@ -39,7 +39,7 @@ function QuizMode() {
             border: 'none',
             padding: '8px', // パディングを調整
             marginRight: '10px',
-            borderRadius: '50%', // ボタンを丸くする
+            borderRadius: '10%', // ボタンを丸くする
             '&:hover': {
               backgroundColor: 'rgba(0, 0, 0, 0.1)', // ホバー時に少し背景を暗く
             },

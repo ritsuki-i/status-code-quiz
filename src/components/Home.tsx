@@ -1,30 +1,55 @@
-import React from 'react'
+/** @jsxImportSource @emotion/react */
+import React, { CSSProperties } from 'react'
+import { css } from '@emotion/react';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className='Home'>
-      <header style={{ backgroundColor: '#ffeeb5', padding:'10px 0'}}>
-        <h2 style={{ width: '100%', textAlign: 'center' }}>What's this error?</h2>
-        <h3 style={{ width: '100%', textAlign: 'center' }}>-ゲームでステータスコードをばっちり覚えちゃおう！-</h3>
-      </header>
-      <div className="menu-button-block" style={{ display: 'flex', margin: '100px auto', justifyContent: 'space-between', width: '80vw' }}>
-        <button type="button"
-          className="btn btn-outline-dark menu-button" onClick={() => navigate('/karutamode')} style={{ textShadow: '2px 2px 2px rgba(255, 255, 255, 0.8)', marginLeft: '30px' }}>かるたモード</button>
-        <button type="button"
-          className="btn btn-outline-dark menu-button" onClick={() => navigate('/quizmode')} style={{ textShadow: '2px 2px 2px rgba(255, 255, 255, 0.8)' }}>クイズモード</button>
-        <button type="button"
-          className="btn btn-outline-dark menu-button" onClick={() => navigate('/practicemode')} style={{ textShadow: '2px 2px 2px rgba(255, 255, 255, 0.8)', marginRight: '30px' }}>練習モード</button>
-        <button type="button"
-          className="btn btn-outline-dark menu-button" onClick={() => navigate('/statuscodedata')} style={{ textShadow: '2px 2px 2px rgba(255, 255, 255, 0.8)', marginRight: '30px' }}>ステータスコード一覧</button>
+    <div className='Home' style={{ backgroundColor: '#171810', height: '100vh', textAlign: 'center' }}>
+      <div style={{ height: '60vh', width: '100vw', padding: '50px' }}>
+        <img className="slide-img" src={`${process.env.PUBLIC_URL}/img/logo.webp`} alt='' style={{ height: '100%' }} />
       </div>
-      <footer style={{ backgroundColor: '#ffeeb5', textAlign: 'center', padding: '30px', position: 'absolute', bottom: '0', width: '100vw' }}>
+      <div className="menu-button-block" style={buttonGroupStyle}>
+        <button type="button" onClick={() => navigate('/karutamode')} css={buttonStyle}>▸ かるたモード</button>
+        <button type="button" onClick={() => navigate('/quizmode')} css={buttonStyle}>▸ クイズモード</button>
+        <button type="button" onClick={() => navigate('/practicemode')} css={buttonStyle}>▸ 練習モード</button>
+        <button type="button" onClick={() => navigate('/statuscodedata')} css={buttonStyle}>▸ ステータスコード一覧</button>
+      </div>
+      <footer style={{ textAlign: 'center', padding: '30px', position: 'absolute', bottom: '0', width: '100vw', color: 'white' }}>
         © 2024 Ritsuki Ishikawa
       </footer>
     </div>
   )
 }
+
+// ボタンのグループ全体のスタイル
+const buttonGroupStyle: CSSProperties = {
+  display: 'inline-flex', // 子要素のサイズに合わせる
+  flexDirection: 'column',
+  alignItems: 'flex-start', // ボタンを左揃え
+  margin: '0 auto',        // グループ全体を中央に配置
+};
+
+// ボタンの共通スタイル
+const buttonStyle = css({
+  background: '#ffffff00',
+  border: 'none',
+  color: 'white',
+  fontSize: '20px',
+  fontFamily: 'sans-serif',
+  margin: '10px',
+  cursor: 'pointer',
+  textAlign: 'left',
+  paddingLeft: '20px',
+  transition: 'background-color 0.3s ease',
+  '&:hover': {
+    backgroundColor: '#ffffff49', // ホバー時に背景を暗く
+  },
+  '&:focus': {
+    outline: 'none', // フォーカス時にアウトラインを消す
+  },
+});
 
 export default Home
