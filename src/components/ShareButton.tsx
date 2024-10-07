@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import { FaRegShareSquare } from "react-icons/fa";
 
 type ShareButtonProps = {
   score: string;  // スコアを受け取るためのプロパティ
@@ -25,5 +26,5 @@ export const ShareButton: React.FC<ShareButtonProps> = ({ score }) => {
     })();
   }, [score]);
 
-  return <button onClick={handleClick}>結果を共有</button>;
+  return <button onClick={handleClick} className='btn btn-outline-dark'><FaRegShareSquare />結果を共有</button>;
 };

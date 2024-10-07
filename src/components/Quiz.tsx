@@ -6,6 +6,7 @@ import { MdOutlineReplay } from "react-icons/md";
 import quizData from '../data/error_code.json';
 import statusData from '../data/status_code.json';
 import { ShareButton } from './ShareButton';
+import { RankingButton } from './RankingButton';
 
 interface StatusCombination {
     status_code: number;
@@ -15,7 +16,7 @@ interface StatusCombination {
 const Quiz = () => {
     const navigate = useNavigate();
 
-    const num_questions = 5;
+    const num_questions = 1; //クイズの問題数
     const [questions, setQuestions] = useState(quizData.slice(0, num_questions)); // クイズデータ
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // 現在の問題インデックス
     const [inputValue, setInputValue] = useState(''); // textboxの入力
@@ -155,13 +156,16 @@ const Quiz = () => {
             {finished ? (
                 <div>
                     <h2>クイズ終了！タイム: {(timer + penaltyTime).toFixed(2)}秒</h2>
-                    <ShareButton score={(timer + penaltyTime).toFixed(2)} />
                     <div className='select-btn' style={{ display: 'flex', justifyContent: 'center' }}>
+                        <ShareButton score={(timer + penaltyTime).toFixed(2)} />
+                        <RankingButton score={(timer + penaltyTime).toFixed(2)} />
+                    </div>
+                    <div className='select-btn' style={{ display: 'flex', justifyContent: 'center', marginTop:'10px' }}>
                         <button className='btn btn-outline-dark' onClick={() => navigate('/')} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                             <FaHome />
                             ホームに戻る
                         </button>
-                        <button className='btn btn-outline-dark' onClick={() => window.location.reload()} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                        <button className='btn btn-outline-dark' onClick={() => window.location.reload()} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginLeft:'10px' }}>
                             <MdOutlineReplay />
                             もう一度プレイ
                         </button>

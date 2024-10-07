@@ -1,15 +1,43 @@
 /** @jsxImportSource @emotion/react */
-import React, { CSSProperties } from 'react'
+import React, { CSSProperties, useEffect, useState } from 'react'
 import { css } from '@emotion/react';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const navigate = useNavigate();
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // 画面サイズを監視して更新
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // スマホサイズかどうかを判定
+  const isMobile = windowWidth <= 768;
+
+  const imageStyle = css({
+    height: isMobile ? 'auto' : '100%', // スマホでは高さは自動、PCでは100vh
+    width: isMobile ? '100%' : 'auto',  // スマホでは幅を100vw、PCでは自動調整
+  });
+
   return (
-    <div className='Home' style={{ backgroundColor: '#171810', height: '100vh', textAlign: 'center' }}>
-      <div style={{ height: '60vh', width: '100vw', padding: '50px' }}>
-        <img className="slide-img" src={`${process.env.PUBLIC_URL}/img/logo.webp`} alt='' style={{ height: '100%' }} />
+    <div className='Home' style={{ backgroundColor: '#171810', height: '100vh', width: '100vw', textAlign: 'center' }}>
+      <div style={{ width: '100vw', padding: '50px' }}>
+        <img
+          className="slide-img"
+          src={`${process.env.PUBLIC_URL}/img/logo.webp`}
+          alt=""
+          css={imageStyle}
+        />
       </div>
       <div className="menu-button-block" style={buttonGroupStyle}>
         <button type="button" onClick={() => navigate('/karutamode')} css={buttonStyle}>▸ かるたモード</button>
