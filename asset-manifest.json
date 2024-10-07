@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/status-code-quiz/static/js/main.e4df6720.js",
+    "main.js": "/status-code-quiz/static/js/main.9f150756.js",
     "index.html": "/status-code-quiz/index.html",
-    "main.e4df6720.js.map": "/status-code-quiz/static/js/main.e4df6720.js.map"
+    "main.9f150756.js.map": "/status-code-quiz/static/js/main.9f150756.js.map"
   },
   "entrypoints": [
-    "static/js/main.e4df6720.js"
+    "static/js/main.9f150756.js"
   ]
 }
