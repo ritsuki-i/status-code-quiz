@@ -16,7 +16,7 @@ interface StatusCombination {
 const Quiz = () => {
     const navigate = useNavigate();
 
-    const num_questions = 1; //クイズの問題数
+    const num_questions = 10; //クイズの問題数
     const [questions, setQuestions] = useState(quizData.slice(0, num_questions)); // クイズデータ
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // 現在の問題インデックス
     const [inputValue, setInputValue] = useState(''); // textboxの入力
