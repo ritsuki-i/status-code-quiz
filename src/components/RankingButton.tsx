@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaRankingStar } from 'react-icons/fa6';
 import { FaCrown } from "react-icons/fa";
 import TextField from '@mui/material/TextField';
-import { getRanking, addRanking } from './firebaseFunctions';
+import { getRanking, addRanking } from '../firebaseFunctions';
 
 // ランキングの型
 interface RankingEntry {
