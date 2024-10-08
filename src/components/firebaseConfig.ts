@@ -13,13 +13,13 @@ interface FirebaseConfig {
 }
 
 const firebaseConfig: FirebaseConfig = {
-  apiKey: "AIzaSyDw477h3JudJxrycrUd9KgljXAMHpD-tJ8",
-  authDomain: "status-code-quiz-3e8cd.firebaseapp.com",
-  projectId: "status-code-quiz-3e8cd",
-  storageBucket: "status-code-quiz-3e8cd.appspot.com",
-  messagingSenderId: "341338615577",
-  appId: "1:341338615577:web:3d73593bc8e994e480df88",
-  measurementId: "G-4RQTTJYNE7"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY!,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN!,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID!,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET!,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID!,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID!,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID!, 
 };
 
 // Firebaseを初期化
